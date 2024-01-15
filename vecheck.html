@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vecheck</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="icon" href="images/gresagela_logo.png" type="image/png" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;0,9..40,1000;1,9..40,100;1,9..40,200;1,9..40,300;1,9..40,400;1,9..40,500;1,9..40,600;1,9..40,700;1,9..40,800;1,9..40,900;1,9..40,1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--Fancybox-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+
+    <script>
+      tailwind.config = {
+        content: ["./src/**/*.html"],
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["DM Sans", "sans"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <style type="text/tailwindcss">
+      ::selection {
+        color: #ffffff;
+        background: #135bd6;
+      }
+    </style>
+
+    <script>
+      $(document).ready(function () {
+        $("#preloader").fadeOut();
+        $("body").fadeIn();
+      });
+
+      window.onunload = function () {
+        window.scrollTo(0, 0);
+      };
+    </script>
+  </head>
+  <body>
+    <div id="preloader" class="hidden">
+      <div class="loader"></div>
+    </div>
+
+    <div class="relative flex min-h-screen justify-center">
+      <div class="flex flex-grow justify-between">
+        <div class="mx-auto max-w-screen-xl w-full max-sm:px-6 sm:px-6">
+          <nav class="navbar">
+            <a class="logo" href="index.html">Gresa Gela</a>
+
+            <input type="checkbox" id="nav" class="hidden" />
+            <label for="nav" class="nav-open"><i></i><i></i><i></i></label>
+
+            <div class="nav-container">
+              <ul class="nav_menu">
+                <li><a href="index.html">work</a></li>
+                <li><a href="mailto:gresagela1@gmail.com">contact</a></li>
+              </ul>
+            </div>
+          </nav>
+
+          <div class="mt-28 max-sm:mt-20 sm:mt-20 md:mt-24 xl:mt-24 2xl:mt-28">
+            <div class="mb-8 2xl:mb-10 xl:mb-10 md:mb-8 max-sm:mb-8 sm:mb-8">
+              <h1
+                class="text-5xl max-sm:text-4xl sm:text-4xl md:text-5xl lg:text-5xl 2xl:text-5xl font-medium pb-4"
+              >
+                VeCheck
+              </h1>
+              <p class="text-lg">
+                Designed a platform that revolutionizes the vehicle inspection
+                workflow.
+              </p>
+            </div>
+
+            <div
+              class="flex items-center bg-cover bg-no-repeat relative h-[30rem] bg-[#21C57C] overflow-hidden rounded-[56px] max-sm:h-[18rem] max-sm:rounded-[40px] sm:h-[20rem] sm:rounded-[40px] md:rounded-[48px] lg:rounded-[48px] xl:rounded-[56px] 2xl:rounded-[56px] sm:md:h-[24rem] lg:h-[32rem] xl:h-[32rem] 2xl:h-[32rem]"
+            >
+              <img
+                src="images/vecheck_cover.png"
+                class="max-w-full"
+                alt="Vecheck"
+              />
+            </div>
+          </div>
+
+          <div
+            class="mt-20 mb-24 max-sm:mt-12 max-sm:mb-16 sm:mt-12 sm:mb-16 md:mt-16 md:mb-16 lg:mt-12 lg:mb-20 xl:mt-12 xl:mb-24 2xl:mt-12 2xl:mb-24"
+          >
+            <div
+              class="flex justify-between items-center max-sm:block max-sm:space-y-6 sm:space-y-0"
+            >
+              <div class="block">
+                <p class="pb-1 max-sm:text-lg sm:text-lg text-xl font-semibold">
+                  Role
+                </p>
+                <span class="text-lg">Product Designer</span>
+              </div>
+
+              <div class="block">
+                <p class="pb-1 max-sm:text-lg sm:text-lg text-xl font-semibold">
+                  Tools
+                </p>
+                <span class="text-lg">Adobe XD, Figma, Whimsical</span>
+              </div>
+
+              <div class="block">
+                <p class="pb-1 max-sm:text-lg sm:text-lg text-xl font-semibold">
+                  Timeline
+                </p>
+                <span class="text-lg">Oct 2021 - May 2023</span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="mb-32 max-sm:mb-20 sm:mb-20 md:mb-24 lg:mb-28 xl:mb-32 2xl:mb-32"
+          >
+            <h1
+              class="text-4xl max-sm:text-3xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl 2xl:text-4xl max-sm:pb-4 sm:pb-4 md:pb-8 lg:pb-8 xl:pb-8 2xl:pb-8 pb-8 font-medium"
+            >
+              Context
+            </h1>
+
+            <p class="text-lg">
+              VeCheck (Vehicle Check) is an innovative vehicle check inspection
+              platform that helps businesses increase sales and build stronger
+              connections with their customers. My main duties were to design
+              the web application for the admin role and the mobile app for the
+              mechanic role from scratch and create various visuals as needed. I
+              also worked on improving the user experience of the final product
+              by introducing a more user-friendly interface and additional
+              features.
+            </p>
+
+            <div class="flex items-center mt-12">
+              <span
+                class="border-4 border-[#f3f3f3] h-20 max-sm:h-40 sm:h-28 xl:h-20 2xl:h-20 rounded-3xl"
+              ></span>
+              <p
+                class="text-2xl md:text-2xl lg:text-2xl xl:text-2xl 2xl:text-2xl max-sm:text-xl sm:text-xl max-sm:px-8 sm:px-8 font-regular leading-normal px-10 xl:px-10 2xl:px-10"
+              >
+                In translating the inspection checklist form from paper to
+                screen, I aimed at creating an engaging user-friendly checklist
+                and additional features that can be customized based on the user
+                needs.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="mb-32 max-sm:mb-20 sm:mb-20 md:mb-24 lg:mb-28 xl:mb-32 2xl:mb-32"
+          >
+            <h1
+              class="text-4xl max-sm:text-3xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl 2xl:text-4xl max-sm:pb-4 sm:pb-4 md:pb-8 lg:pb-8 xl:pb-8 2xl:pb-8 pb-8 font-medium"
+            >
+              Problem
+            </h1>
+
+            <p class="text-lg">
+              The most common car problems are broken windshield wipers, broken
+              brakes, misaligned wheels, and burned-out lights. When the
+              customer has handed in the car for service, they can feel sure
+              that their car is in safe hands.
+            </p>
+
+            <div
+              class="flex space-x-8 px-20 mt-16 max-sm:mt-8 max-sm:block max-sm:space-x-0 max-sm:px-0 max-sm:space-y-6 sm:block sm:space-x-0 sm:px-0 sm:space-y-8 md:flex md:px-0 md:space-y-0 md:space-x-6 lg:px-12 lg:space-x-8 xl:px-16 xl:space-x-8 2xl:px-20 2xl:space-x-8"
+            >
+              <div
+                class="flex bg-[#f6f6f6] space-x-6 max-sm:p-6 xl:p-7 2xl:p-7 sm:p-6 p-7 pr-9 rounded-[32px]"
+              >
+                <img class="w-8 h-8" src="images/warning_gray.svg" />
+                <p
+                  class="text-xl max-sm:text-lg sm:text-lg md:text-xl lg:text-xl xl:text-xl 2xl:text-xl text-gray-500 font-normal leading-normal"
+                >
+                  In fact it is not that easy to explain to a customer if, for
+                  example, you discover a fault that must be fixed while the car
+                  is on the lift can be challenging.
+                </p>
+              </div>
+
+              <div
+                class="flex bg-[#f6f6f6] space-x-6 max-sm:p-6 xl:p-7 2xl:p-7 sm:p-6 p-7 pr-9 rounded-[32px]"
+              >
+                <img class="w-8 h-8" src="images/target_gray.svg" />
+                <p
+                  class="text-xl max-sm:text-lg sm:text-lg md:text-xl lg:text-xl xl:text-xl 2xl:text-xl text-gray-500 font-normal leading-normal"
+                >
+                  How might we create an easy workflow for inspectors and
+                  customers so that more efficient checks are made in a way that
+                  nothing is missed?
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="mb-32 max-sm:mb-20 sm:mb-20 md:mb-24 lg:mb-28 xl:mb-32 2xl:mb-32"
+          >
+            <h1
+              class="text-4xl max-sm:text-3xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl 2xl:text-4xl max-sm:pb-4 sm:pb-4 md:pb-8 lg:pb-8 xl:pb-8 2xl:pb-8 pb-8 font-medium"
+            >
+              Goal
+            </h1>
+
+            <div
+              class="text-2xl md:text-2xl lg:text-2xl xl:text-2xl 2xl:text-2xl max-sm:text-xl sm:text-xl max-sm:pr-0 sm:pr-0 font-regular leading-normal pr-12 pb-8"
+            >
+              Streamlining automotive workshop operations by allowing
+              administrators to create personalized checklists for all services.
+            </div>
+
+            <p class="text-lg">
+              Mechanics use these checklists for standardized inspections, while
+              the vehicle owners will be informed about their car's inspection
+              status, enhancing overall transparency and workflow efficiency.
+            </p>
+          </div>
+
+          <div
+            class="mb-32 max-sm:mb-20 sm:mb-20 md:mb-24 lg:mb-28 xl:mb-32 2xl:mb-32"
+          >
+            <h1
+              class="text-4xl max-sm:text-3xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl 2xl:text-4xl max-sm:pb-4 sm:pb-4 md:pb-8 lg:pb-8 xl:pb-8 2xl:pb-8 pb-8 font-medium"
+            >
+              Key needs
+            </h1>
+
+            <p class="text-lg">
+              The insights and needs I identified from the research and feedback
+              that I received played a crucial role in how I designed our
+              solution and as a result I discovered the following points.
+            </p>
+
+            <div class="mt-16 max-sm:mt-10">
+              <a
+                href="images/key_needs_vecheck.png"
+                class="flex justify-center"
+                data-fancybox="gallery"
+                data-caption="Key needs"
+              >
+                <img
+                  alt="Key needs"
+                  class="w-[68rem]"
+                  src="images/key_needs_vecheck.png"
+                />
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="mb-32 max-sm:mb-20 sm:mb-20 md:mb-24 lg:mb-28 xl:mb-32 2xl:mb-32"
+          >
+            <h1
+              class="text-4xl max-sm:text-3xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl 2xl:text-4xl max-sm:pb-4 sm:pb-4 md:pb-8 lg:pb-8 xl:pb-8 2xl:pb-8 pb-8 font-medium"
+            >
+              Insights
+            </h1>
+
+            <ul class="text-lg space-y-3">
+              <li>
+                <span class="pr-2">●</span>
+                As a customer, I want to
+                <span class="font-bold"> receive an SMS or Email</span> for my
+                inspections and approvals.
+              </li>
+              <li>
+                <span class="pr-2">●</span>
+                As a mechanic, I want to
+                <span class="font-bold">keep all my inspections </span> in one
+                place.
+              </li>
+              <li>
+                <span class="pr-2">●</span>
+                As a mechanic, I want to
+                <span class="font-bold">attach photos and videos</span> of the
+                problem related to the specific inspection.
+              </li>
+              <li>
+                <span class="pr-2">●</span>
+                As a mechanic, I want to
+                <span class="font-bold">have a customized checklist </span> for
+                all services provided by the garage.
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="mb-32 max-sm:mb-20 sm:mb-20 md:mb-24 lg:mb-28 xl:mb-32 2xl:mb-32"
+          >
+            <h1
+              class="text-4xl max-sm:text-3xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl 2xl:text-4xl max-sm:pb-4 sm:pb-4 md:pb-8 lg:pb-8 xl:pb-8 2xl:pb-8 pb-8 font-medium"
+            >
+              Process
+            </h1>
+
+            <p class="text-lg">
+              In order to design a better journey, we figured out what mediums
+              would be feasible for implementation.
+            </p>
+
+            <div
+              class="grid grid-cols-3 gap-x-36 max-sm:mt-10 mt-16 max-sm:block max-sm:space-y-10 max-sm:gap-x-0 sm:block sm:space-y-12 sm:gap-x-0 md:flex md:space-y-0 md:gap-x-16 lg:flex lg:gap-y-0 lg:gap-x-20 xl:gap-x-32 2xl:gap-x-36"
+            >
+              <div class="w-full block space-y-6 max-sm:space-y-4">
+                <span class="font-semibold text-5xl text-[#eaeaea]">01</span>
+                <p class="text-lg">
+                  <span class="font-bold">A Mobile app</span> offers more
+                  flexibility to mechanics to customize their tasks and
+                  checklists.
+                </p>
+              </div>
+
+              <div class="w-full block space-y-6 max-sm:space-y-4">
+                <span class="font-semibold text-5xl text-[#eaeaea]">02</span>
+                <p class="text-lg">
+                  <span class="font-bold">An SMS Link</span> is sent to the
+                  customer to see the inspections and receive notifications for
+                  the vehicle and it can be opened in the browser.
+                </p>
+              </div>
+
+              <div class="w-full block space-y-6 max-sm:space-y-4">
+                <span class="font-semibold text-5xl text-[#eaeaea]">03</span>
+                <p class="text-lg">
+                  <span class="font-bold">A Dashboard</span> is used for the
+                  admin, since we deal with a lot of data and functions that are
+                  used to manage configurations, settings and features.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="mb-32 max-sm:mb-20 sm:mb-20 md:mb-24 lg:mb-28 xl:mb-32 2xl:mb-32"
+          >
+            <h1
+              class="text-4xl max-sm:text-3xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl 2xl:text-4xl max-sm:pb-4 sm:pb-4 md:pb-8 lg:pb-8 xl:pb-8 2xl:pb-8 pb-8 font-medium"
+            >
+              Competitive Analysis
+            </h1>
+
+            <p class="text-lg">
+              To better understand the flow behind digital vehicle inspection, I
+              researched similar platforms to gather different ideas, and I
+              found out that almost none of them had some specific features that
+              we provide. This then led me to contribute to some of the best
+              solutions for our product.
+            </p>
+
+            <div
+              class="flex items-center space-x-6 justify-center mt-16 max-sm:grid max-sm:items-center max-sm:space-y-8 max-sm:space-x-0 max-sm:mt-10 sm:space-y-0 sm:space-x-20 sm:mt-12 md:space-x-32 lg:space-x-40 md:mt-16 md:space-y-0 xl:space-x-48 2xl:space-x-48 2xl:mt-20 xl:mt-20- xl:space-y-0"
+            >
+              <img
+                class="w-40 max-sm:w-28 sm:w-32"
+                src="images/FleetGo_vecheck.png"
+              />
+              <img
+                class="w-48 max-sm:w-32 sm:w-40"
+                src="images/GoAudits_vecheck.png"
+              />
+              <img
+                class="w-40 max-sm:w-28 sm:w-32"
+                src="images/tcheck_vecheck.png"
+              />
+            </div>
+          </div>
+
+          <div
+            class="mb-32 max-sm:mb-20 sm:mb-20 md:mb-24 lg:mb-28 xl:mb-32 2xl:mb-32"
+          >
+            <h1
+              class="text-4xl max-sm:text-3xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl 2xl:text-4xl max-sm:pb-4 sm:pb-4 md:pb-8 lg:pb-8 xl:pb-8 2xl:pb-8 pb-8 font-medium"
+            >
+              User research
+            </h1>
+
+            <p class="text-lg">
+              During user research interviews we aimed to understand all the
+              roles and the perspectives from all users such as: mechanics,
+              customers and admins. To better understand and empathize with how
+              mechanics operate the workflow in a garage we conducted 12
+              interviews.
+            </p>
+
+            <p class="text-lg pt-6">
+              Our discussions focused on exploring the challenges faced by
+              administrators in managing vehicle inspections and how the web
+              application streamlined their tasks. For mechanics, we sought
+              insights into the usability of the mobile app, aiming to uncover
+              ways in which it facilitated their roles during inspections. For
+              customers, we tried to improve the communication between the
+              mechanics by staying informed about the status of their vehicles.
+            </p>
+          </div>
+
+          <div
+            class="mb-32 max-sm:mb-20 sm:mb-20 md:mb-24 lg:mb-28 xl:mb-32 2xl:mb-32"
+          >
+            <h1
+              class="text-4xl max-sm:text-3xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl 2xl:text-4xl max-sm:pb-4 sm:pb-4 md:pb-8 lg:pb-8 xl:pb-8 2xl:pb-8 pb-8 font-medium"
+            >
+              Ideation
+            </h1>
+            <p class="text-lg">
+              After validating our problem statement and pain points, I started
+              ideating different scenarios and use cases for the web application
+              and the mobile app. Afterwards, I was able to put my ideas on the
+              screen and paper where we all brainstormed for several weeks until
+              we got a solid idea. Once I observed everything and clarified my
+              thought process, I started with some rough wireframes and began
+              refining them.
+            </p>
+
+            <div
+              class="mt-16 max-sm:mt-10 sm:mt-10 md:mt-12 lg:mt-16 xl:mt-16 2xl:mt-160"
+            >
+              <a
+                href="images/mind_mapping_vecheck.png"
+                class="flex justify-center"
+                data-fancybox="gallery"
+                data-caption="Brainstorming"
+              >
+                <img
+                  alt="Wireframes"
+                  class="rounded-[40px] 2xl:w-[54rem] lg:w-[48rem] md:w-[80%] sm:w-[100%] max-sm:w-[100%] max-sm:rounded-[32px]"
+                  src="images/mind_mapping_vecheck.png"
+                />
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="mb-32 max-sm:mb-20 sm:mb-20 md:mb-24 lg:mb-28 xl:mb-32 2xl:mb-32"
+          >
+            <h1
+              class="text-4xl max-sm:text-3xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl 2xl:text-4xl max-sm:pb-4 sm:pb-4 md:pb-8 lg:pb-8 xl:pb-8 2xl:pb-8 pb-8 font-medium"
+            >
+              Wireframes
+            </h1>
+
+            <p class="text-lg">
+              From our ideation, we consolidated our ideas and afterwards I
+              created the wireframes and prototypes of our ideas. Our first
+              round was to test different versions and approaches that I had
+              created at a low-fi and in the other versions I created more
+              enhanced versions since we were looking to gather more detailed
+              feedback from users. As we started to gather all the details, the
+              design took shape both in terms of the interface and user
+              experience.
+            </p>
+
+            <div
+              class="flex 2xl:space-x-12 px-24 mt-20 xl:flex lg:flex md:flex sm:flex sm:space-x-6 max-sm:space-x-6 md:space-x-6 lg:space-x-8 max-sm:block md:mt-12 lg:mt-16 lg:px-0 md:px-0 sm:px-0 max-sm:px-0 max-sm:mt-10"
+            >
+              <a
+                href="images/sketch_vecheck.png"
+                data-fancybox="gallery"
+                data-caption="Sketches"
+                class="2xl:w-1/2 xl:w-1/2 lg:w-1/2 md:w-5/6 sm:w-1/2 max-sm:w-full max-sm:h-1/2"
+              >
+                <img
+                  alt="Sketches"
+                  class="rounded-[40px] sm:rounded-[32px] max-sm:rounded-[32px] w-full"
+                  src="images/sketch_vecheck.png"
+                />
+              </a>
+
+              <a
+                href="images/wireframe_vecheck.png"
+                data-fancybox="gallery"
+                data-caption="Wireframes"
+                class="2xl:w-1/2 xl:w-1/2 lg:w-1/2 md:w-5/6 sm:w-1/2 max-sm:w-full max-sm:h-1/2"
+              >
+                <img
+                  alt="Wireframes"
+                  class="rounded-[40px] sm:rounded-[32px] max-sm:rounded-[32px] w-full"
+                  src="images/wireframe_vecheck.png"
+                />
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="mb-32 max-sm:mb-20 sm:mb-20 md:mb-24 lg:mb-28 xl:mb-32 2xl:mb-32"
+          >
+            <h1
+              class="text-4xl max-sm:text-3xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl 2xl:text-4xl max-sm:pb-4 sm:pb-4 md:pb-8 lg:pb-8 xl:pb-8 2xl:pb-8 pb-8 font-medium"
+            >
+              User Journey
+            </h1>
+
+            <div class="flex justify-center mt-10">
+              <a
+                href="images/user_journey_vecheck.jpg"
+                class="w-5/6"
+                data-fancybox="gallery"
+                data-caption="User Journey"
+              >
+                <img alt="User Journey" src="images/user_journey_vecheck.jpg" />
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="mb-32 max-sm:mb-20 sm:mb-20 md:mb-24 lg:mb-28 xl:mb-32 2xl:mb-32"
+          >
+            <h1
+              class="text-4xl max-sm:text-3xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl 2xl:text-4xl max-sm:pb-4 sm:pb-4 md:pb-8 lg:pb-8 xl:pb-8 2xl:pb-8 pb-8 font-medium"
+            >
+              Sitemap
+            </h1>
+
+            <div class="flex justify-center">
+              <a
+                href="images/sitemap_vecheck.jpg"
+                class=""
+                data-fancybox="gallery"
+                data-caption="Sitemap"
+              >
+                <img alt="Sitemap" src="images/sitemap_vecheck.jpg" />
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="mb-32 max-sm:mb-20 sm:mb-20 md:mb-24 lg:mb-28 xl:mb-32 2xl:mb-32"
+          >
+            <h1
+              class="text-4xl max-sm:text-3xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl 2xl:text-4xl max-sm:pb-4 sm:pb-4 md:pb-8 lg:pb-8 xl:pb-8 2xl:pb-8 pb-8 font-medium"
+            >
+              Designs
+            </h1>
+
+            <div>
+              <div class="flex justify-center pt-8">
+                <div>
+                  <iframe
+                    style="border: 1px solid rgba(0, 0, 0, 0.1)"
+                    width="390px"
+                    height="810px"
+                    class="max-sm:w-[340px] max-sm:h-[720px]"
+                    src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FEtRcrZvwdBMfP9WaKYJBkn%2FVecheck---Customer-view%3Ftype%3Ddesign%26node-id%3D1-275%26t%3DTECqwfg8NzVqPPeK-1%26scaling%3Dscale-down%26page-id%3D0%253A1%26starting-point-node-id%3D1%253A2831%26mode%3Ddesign"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>
+
+              <p
+                class="text-center pt-10 text-gray-500 italic max-sm:pt-6 sm:pt-6 md:pt-8 lg:pt-10 xl:pt-10 2xl:pt-10"
+              >
+                This is the prototype when an SMS link is sent to the customer.
+              </p>
+
+              <div
+                class="flex justify-center pt-24 max-sm:pt-12 sm:pt-12 md:pt-16 lg:pt-20 xl:pt-20 2xl:pt-24"
+              >
+                <a
+                  href="images/inspections.png"
+                  data-fancybox="gallery"
+                  data-caption="Sitemap"
+                >
+                  <img
+                    alt="Sitemap"
+                    src="images/inspections.png"
+                    class="rounded-[56px] sm:rounded-[32px] max-sm:rounded-[32px] md:rounded-[40px] lg:rounded-[48px] xl:rounded-[52px] 2xl:rounded-[52px] w-full"
+                  />
+                </a>
+              </div>
+
+              <p
+                class="text-center pt-10 text-gray-500 italic max-sm:pt-6 sm:pt-6 md:pt-8 lg:pt-10 xl:pt-10 2xl:pt-10"
+              >
+                Admin view screens of the inspection list
+              </p>
+
+              <div
+                class="flex justify-center pt-24 max-sm:pt-12 sm:pt-12 md:pt-16 lg:pt-20 xl:pt-20 2xl:pt-24"
+              >
+                <a
+                  href="images/app_vecheck.png"
+                  data-fancybox="gallery"
+                  data-caption="Sitemap"
+                >
+                  <img
+                    alt="Sitemap"
+                    src="images/app_vecheck.png"
+                    class="rounded-[52px] sm:rounded-[32px] max-sm:rounded-[32px] md:rounded-[40px] lg:rounded-[48px] xl:rounded-[52px] 2xl:rounded-[52px] w-full"
+                  />
+                </a>
+              </div>
+
+              <p
+                class="text-center pt-10 text-gray-500 italic max-sm:pt-6 sm:pt-6 md:pt-8 lg:pt-10 xl:pt-10 2xl:pt-10"
+              >
+                Some screens from the app
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="mb-32 max-sm:mb-20 sm:mb-20 md:mb-24 lg:mb-28 xl:mb-32 2xl:mb-32"
+          >
+            <h1
+              class="text-4xl max-sm:text-3xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl 2xl:text-4xl max-sm:pb-4 sm:pb-4 md:pb-8 lg:pb-8 xl:pb-8 2xl:pb-8 pb-8 font-medium"
+            >
+              Takeaways
+            </h1>
+            <p class="text-lg">
+              This project was challenging but also rewarding. It was my first
+              time working on an early-stage startup and the learning curve on
+              this project was extremely steep. Starting everything from scratch
+              was such an eye-opening experience that taught me a lot. Due to
+              the many details that we collected and new features, there were
+              many times that I needed to design and redesign while the time
+              constraint for prototyping was much shorter than the given time
+              for research.
+            </p>
+          </div>
+
+          <div class="mb-12">© Gresa Gela</div>
+        </div>
+      </div>
+    </div>
+
+    <!--Fancybox-->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script src="fancybox.js"></script>
+
+    <!--Flowbite-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+  </body>
+</html>
