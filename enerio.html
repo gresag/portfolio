@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Enerio</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="icon" href="images/gresagela_logo.png" type="image/png" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+    <!--Fancybox-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+        content: ["./src/**/*.html"],
+        theme: {
+          extend: {
+            maxWidth: {
+              1200: "1200px", // Custom max-width of 1200px
+            },
+            fontFamily: {
+              sans: ["Poppins", "sans"],
+            },
+
+            fontWeight: {
+              100: 100,
+              200: 200,
+              300: 300,
+              400: 400,
+              500: 500,
+              600: 600,
+              700: 700,
+              800: 800,
+              900: 900, // All weights from 100 to 900
+            },
+          },
+        },
+      };
+    </script>
+
+    <style type="text/tailwindcss">
+      ::selection {
+        color: #ffffff;
+        background: #135bd6;
+      }
+    </style>
+
+    <script>
+      $(document).ready(function () {
+        $("#preloader").fadeOut();
+        $("body").fadeIn();
+      });
+
+      window.onunload = function () {
+        window.scrollTo(0, 0);
+      };
+    </script>
+  </head>
+  <body>
+    <div id="preloader" class="hidden">
+      <div class="loader"></div>
+    </div>
+
+    <div class="relative flex min-h-screen justify-center">
+      <div class="flex flex-grow justify-between">
+        <div class="mx-auto max-w-1200 w-full max-sm:px-6 sm:px-6">
+          <nav class="navbar">
+            <a class="logo" href="index.html">Gresa Gela</a>
+
+            <input type="checkbox" id="nav" class="hidden" />
+            <label for="nav" class="nav-open"><i></i><i></i><i></i></label>
+
+            <div class="nav-container">
+              <ul class="nav_menu">
+                <li><a href="index.html">work</a></li>
+                <li><a href="mailto:gresagela1@gmail.com">contact</a></li>
+              </ul>
+            </div>
+          </nav>
+
+          <div class="mt-20 max-sm:mt-16 sm:mt-20 md:mt-24 xl:mt-24 2xl:mt-28">
+            <div
+              class="mb-10 2xl:mb-12 xl:mb-12 md:mb-10 max-sm:mb-10 sm:mb-10"
+            >
+              <h1
+                class="text-4xl max-sm:text-3xl sm:text-4xl md:text-3xl lg:text-5xl xl:text-5xl 2xl:text-5xl max-sm:pb-4 sm:pb-4 md:pb-4 lg:pb-6 xl:pb-6 2xl:pb-6 pb-4 font-500"
+              >
+                Enerio
+              </h1>
+              <p class="text-lg font-light">
+                Designed an app that help flatmates optimize energy consumption.
+              </p>
+            </div>
+
+            <div
+              class="flex items-center bg-cover bg-no-repeat relative overflow-hidden"
+            >
+              <img
+                src="images/enerio_cover.PNG"
+                class="max-w-full rounded-xl"
+                alt="Enerio"
+              />
+            </div>
+          </div>
+
+          <div class="mt-8 mb-16 sm:mt-12 sm:mb-16 lg:mt-16 lg:mb-24">
+            <div
+              class="flex justify-between items-center max-sm:block max-sm:space-y-6 sm:space-y-0"
+            >
+              <div class="block">
+                <p class="pb-2 text-base font-500">Role</p>
+                <span class="text-base font-light">UI/UX Designer</span>
+              </div>
+
+              <div class="block">
+                <p class="pb-2 text-base font-500">Tools</p>
+                <span class="text-base font-light">Figma</span>
+              </div>
+
+              <div class="block">
+                <p class="pb-2 text-base font-500">Timeline</p>
+                <span class="text-base font-light">2 months</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-16 sm:mb-16 md:mb-20 lg:mb-28 xl:mb-36">
+            <h1
+              class="text-4xl max-sm:text-3xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl 2xl:text-4xl max-sm:pb-4 sm:pb-4 md:pb-8 lg:pb-8 xl:pb-8 2xl:pb-8 pb-8 font-500"
+            >
+              Context
+            </h1>
+
+            <p class="text-base font-light leading-7">
+              Enerio is a mobile application designed to assist students and
+              individuals who live in shared flats in optimizing energy
+              consumption during the moving-out or relocating process.
+            </p>
+
+            <div class="flex items-center mt-12">
+              <span
+                class="border-4 border-[#f0f0f0] h-16 max-sm:h-40 sm:h-28 xl:h-16 2xl:h-16 rounded-3xl"
+              ></span>
+              <p class="text-xl px-10 leading-8">
+                Encourages a collaborative approach to managing energy usage,
+                helping flatmates devide costs equally and simplify the
+                responsibilities of shared living.
+              </p>
+            </div>
+
+            <div class="mt-24 max-sm:mt-10">
+              <a
+                href="images/process_enerio.jpg"
+                class="flex justify-center"
+                data-fancybox="gallery"
+                data-caption="Process"
+              >
+                <img
+                  alt="Process"
+                  class="rounded-[40px] w-2/3"
+                  src="images/process_enerio.jpg"
+                />
+              </a>
+            </div>
+          </div>
+
+          <div class="mb-16 sm:mb-16 md:mb-20 lg:mb-28 xl:mb-36">
+            <h1
+              class="text-4xl max-sm:text-3xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl 2xl:text-4xl max-sm:pb-4 sm:pb-4 md:pb-8 lg:pb-8 xl:pb-8 2xl:pb-8 pb-8 font-500"
+            >
+              Problem
+            </h1>
+
+            <p class="text-base font-light leading-7">
+              In shared living spaces, particularly among students and
+              individuals in shared flats, there is a pervasive lack of
+              streamlined communication and coordination regarding energy
+              consumption and responsibilities during the moving-out process.
+              This leads to an overall inefficient and stressful relocation
+              experience.
+            </p>
+
+            <div
+              class="grid grid-cols-1 md:grid-cols-2 gap-8 px-0 mt-8 lg:mt-20 lg:px-24"
+            >
+              <div class="w-full flex flex-col bg-[#F5F5F5] rounded-2xl p-8">
+                <img
+                  class="w-8 h-8 mb-6"
+                  src="images/warning_gray.svg"
+                  alt="Warning icon"
+                />
+                <p class="text-base text-[#1D1D1F] leading-7 font-normal">
+                  The lack of a central platform makes it harder to fairly split
+                  costs, manage contracts, and raise awareness on energy usage.
+                </p>
+              </div>
+
+              <div class="fw-full flex flex-col bg-[#F5F5F5] rounded-2xl p-8">
+                <img
+                  class="w-8 h-8 mb-6"
+                  src="images/target_gray.svg"
+                  alt="Target icon"
+                />
+                <p class="text-base text-[#1D1D1F] leading-7 font-normal">
+                  How can we help residents in shared living spaces track energy
+                  use, pay individually, and simplify the moving-out process?
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-16 sm:mb-16 md:mb-20 lg:mb-28 xl:mb-36">
+            <h1
+              class="text-4xl max-sm:text-3xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl 2xl:text-4xl max-sm:pb-4 sm:pb-4 md:pb-8 lg:pb-8 xl:pb-8 2xl:pb-8 pb-8 font-500"
+            >
+              Goal
+            </h1>
+
+            <div class="text-base font-light leading-7">
+              The goal is to simplify the process of splitting bills, ensuring
+              that each flatmate pays only their part. This transparency fosters
+              a sense of fairness and accountability, reducing the friction
+              often associated with shared living expenses. With the added
+              benefit of contract flexibility during relocation, residents can
+              easily transfer or adjust their energy usage without hassle,
+              making the moving process smoother for everyone.
+            </div>
+
+            <div class="flex items-center mt-12">
+              <span
+                class="border-4 border-[#f0f0f0] h-16 max-sm:h-40 sm:h-28 xl:h-16 2xl:h-16 rounded-3xl"
+              ></span>
+              <p class="text-xl px-10 leading-8">
+                Empower students and residents in shared flats to seamlessly
+                manage and reduce energy consumption individually but also
+                making relocation easier.
+              </p>
+            </div>
+          </div>
+
+          <div class="mb-16 sm:mb-16 md:mb-20 lg:mb-28 xl:mb-36">
+            <h1
+              class="text-4xl max-sm:text-3xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl 2xl:text-4xl max-sm:pb-4 sm:pb-4 md:pb-8 lg:pb-8 xl:pb-8 2xl:pb-8 pb-8 font-500"
+            >
+              Key needs
+            </h1>
+
+            <div
+              class="mt-4 grid grid-cols-4 gap-6 max-sm:grid-cols-1 max-sm:gap-4 sm:grid-cols-2 sm:gap-4 md:grid-cols-2 md:gap-6 lg:grid-cols-2 lg:gap-6 xl:grid-cols-4 xl:gap-6 2xl:grid-cols-4 2xl:gap-6"
+            >
+              <div
+                class="block p-8 rounded-2xl border-4 items-start border-[#eeee]"
+              >
+                <img class="w-10 h-10" src="images/finances.svg" />
+
+                <p class="text-lg pt-10 leading-relaxed">
+                  Challenges in fairly dividing energy costs among residents.
+                </p>
+              </div>
+
+              <div
+                class="block p-8 rounded-2xl border-4 items-start border-[#eeee]"
+              >
+                <img class="w-11 h-11" src="images/relocation.svg" />
+
+                <p class="text-lg pt-10 leading-relaxed">
+                  Difficulties during the moving-in and moving-out process.
+                </p>
+              </div>
+
+              <div
+                class="block p-8 rounded-2xl border-4 items-start border-[#eeee]"
+              >
+                <img class="w-10 h-10" src="images/contract.svg" />
+
+                <p class="text-lg pt-10 leading-relaxed">
+                  Challanges in choosing a suitable energy provider.
+                </p>
+              </div>
+
+              <div
+                class="block p-8 rounded-2xl border-4 items-start border-[#eeee]"
+              >
+                <img class="w-10 h-10" src="images/energy.svg" />
+
+                <p class="text-lg pt-10 leading-relaxed">
+                  Difficulties for the individuals to track usage and expenses.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-16 sm:mb-16 md:mb-20 lg:mb-28 xl:mb-36">
+            <h1
+              class="text-4xl max-sm:text-3xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl 2xl:text-4xl max-sm:pb-4 sm:pb-4 md:pb-8 lg:pb-8 xl:pb-8 2xl:pb-8 pb-8 font-500"
+            >
+              Insights
+            </h1>
+
+            <ul class="space-y-4 mt-3">
+              <li class="flex">
+                <span class="pr-6">●</span>
+
+                <div class="text-base font-light">
+                  Residents prefer being
+
+                  <span class="font-600"> assigned in contracts</span>
+                  with energy providers and
+                  <span class="font-600">manage their energy payments</span>
+                  independently.
+                </div>
+              </li>
+              <li class="flex">
+                <span class="pr-6">●</span>
+                <div class="text-base font-light">
+                  The
+                  <span class="font-600">moving-out process</span> can be a
+                  significant source of stress.
+                </div>
+              </li>
+              <li class="flex">
+                <span class="pr-6">●</span>
+                <div class="text-base font-light">
+                  There is a general
+                  <span class="font-600"> lack of awareness</span>
+                  about individual energy consumption and its environmental
+                  impact.
+                </div>
+              </li>
+              <li class="flex">
+                <span class="pr-6">●</span>
+                <div class="text-base font-light">
+                  Residents often experience
+                  <span class="font-600">changes in living arrangements</span>
+                  based on academic or personal needs.
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mb-16 sm:mb-16 md:mb-20 lg:mb-28 xl:mb-36">
+            <h1
+              class="text-4xl max-sm:text-3xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl 2xl:text-4xl max-sm:pb-4 sm:pb-4 md:pb-8 lg:pb-8 xl:pb-8 2xl:pb-8 pb-8 font-500"
+            >
+              User research
+            </h1>
+
+            <p class="text-base font-light leading-7">
+              After conducting 10 interviews with both students and young
+              professionals several key themes and insights emerged regarding
+              energy usage and the moving-out process. Based on the key insights
+              gathered, I revisited the initial prototype to address the
+              specific pain points uncovered in the interviews.
+            </p>
+          </div>
+
+          <div class="mb-16 sm:mb-16 md:mb-20 lg:mb-28 xl:mb-36">
+            <h1
+              class="text-4xl max-sm:text-3xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl 2xl:text-4xl max-sm:pb-4 sm:pb-4 md:pb-8 lg:pb-8 xl:pb-8 2xl:pb-8 pb-8 font-500"
+            >
+              Personas
+            </h1>
+
+            <div class="flex justify-center mt-4">
+              <img
+                alt="Enerio Wireframes"
+                src="images/personas_enerio.PNG"
+                class="max-w-full rounded-xl"
+              />
+            </div>
+          </div>
+
+          <div class="mb-16 sm:mb-16 md:mb-20 lg:mb-28 xl:mb-36">
+            <h1
+              class="text-4xl max-sm:text-3xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl 2xl:text-4xl max-sm:pb-4 sm:pb-4 md:pb-8 lg:pb-8 xl:pb-8 2xl:pb-8 pb-8 font-500"
+            >
+              Ideation
+            </h1>
+            <p class="text-base font-light leading-7">
+              After gathering insights from user interviews, I began
+              brainstorming solutions to address key challenges that users face.
+              I focused on creating features that would simplify the overall
+              experience while ensuring flexibility for different living
+              arrangements. After brainstorming, I evaluated various options and
+              moved forward by creating low-fidelity wireframes to visualize the
+              best ideas.
+            </p>
+
+            <div
+              class="flex flex-col md:flex-row md:space-x-8 space-y-8 md:space-y-0 mt-12"
+            >
+              <a
+                href="images/brainstorming_enerio1.png"
+                class="w-full md:w-1/2"
+                data-fancybox="gallery"
+                data-caption="Brainstorming"
+              >
+                <img
+                  alt="Brainstorming Enerio"
+                  class="w-full rounded-xl"
+                  src="images/brainstorming_enerio1.png"
+                />
+              </a>
+
+              <a
+                href="images/brainstorming_enerio2.png"
+                class="w-full md:w-1/2"
+                data-fancybox="gallery"
+                data-caption="Brainstorming"
+              >
+                <img
+                  alt="Brainstorming Enerio"
+                  class="w-full rounded-xl"
+                  src="images/brainstorming_enerio2.png"
+                />
+              </a>
+            </div>
+          </div>
+
+          <div class="mb-16 sm:mb-16 md:mb-20 lg:mb-28 xl:mb-36">
+            <h1
+              class="text-4xl max-sm:text-3xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl 2xl:text-4xl max-sm:pb-4 sm:pb-4 md:pb-8 lg:pb-8 xl:pb-8 2xl:pb-8 pb-8 font-500"
+            >
+              Wireframes
+            </h1>
+
+            <div class="flex justify-center mt-4">
+              <a
+                href="images/wireframes_enerio_.PNG"
+                data-fancybox="gallery"
+                data-caption="Wireframes"
+              >
+                <img
+                  alt="Enerio Wireframes"
+                  src="images/wireframes_enerio_.PNG"
+                  class="max-w-full rounded-xl"
+                />
+              </a>
+            </div>
+          </div>
+
+          <div class="mb-16 sm:mb-16 md:mb-20 lg:mb-28 xl:mb-36">
+            <h1
+              class="text-4xl max-sm:text-3xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl 2xl:text-4xl max-sm:pb-4 sm:pb-4 md:pb-8 lg:pb-8 xl:pb-8 2xl:pb-8 pb-8 font-500"
+            >
+              User Flow
+            </h1>
+
+            <div class="flex justify-center mt-8">
+              <a
+                href="images/user_flow_enerio.PNG"
+                data-fancybox="gallery"
+                data-caption="User flow"
+              >
+                <img
+                  alt="User flow"
+                  src="images/user_flow_enerio.PNG"
+                  class="max-w-full rounded -xl"
+                />
+              </a>
+            </div>
+          </div>
+
+          <div class="mb-16 sm:mb-16 md:mb-20 lg:mb-28 xl :mb-36">
+            <h1
+              class="text-4xl max-sm:text-3xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl 2xl:text-4xl max-sm:pb-4 sm:pb-4 md:pb-8 lg:pb-8 xl:pb-8 2xl:pb-8 pb-8 font-500"
+            >
+              Takeaways
+            </h1>
+
+            <p class="text-base font-light leading-7">
+              This UX challenge taught me the importance of staying flexible as
+              a designer, especially when balancing user needs with real-world
+              constraints. It reminded me that sometimes the best solutions come
+              from iterative thinking and being open to change throughout the
+              design process. If I had more time, I would dive deeper into user
+              testing to fine-tune the design even further and explore
+              additional ways to improve the overall experience.
+            </p>
+          </div>
+
+          <div class="mb-12">© Gresa Gela</div>
+        </div>
+      </div>
+    </div>
+
+    <!--Fancybox-->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script src="fancybox.js"></script>
+
+    <!--Flowbite-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+  </body>
+</html>

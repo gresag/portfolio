@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Gresa Gela</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="icon" href="images/gresagela_logo.png" type="image/png" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+        content: ["./src/**/*.html"],
+        theme: {
+          extend: {
+            maxWidth: {
+              1200: "1200px", // Custom max-width of 1200px
+            },
+            fontFamily: {
+              sans: ["Poppins", "sans"],
+            },
+            fontWeight: {
+              100: 100,
+              200: 200,
+              300: 300,
+              400: 400,
+              500: 500,
+              600: 600,
+              700: 700,
+              800: 800,
+              900: 900, // All weights from 100 to 900
+            },
+          },
+        },
+      };
+    </script>
+
+    <style type="text/tailwindcss">
+      ::selection {
+        color: #ffffff;
+        background: #135bd6;
+      }
+    </style>
+
+    <script>
+      $(document).ready(function () {
+        $("#preloader").fadeOut();
+        $("body").fadeIn();
+      });
+
+      window.onunload = function () {
+        window.scrollTo(0, 0);
+      };
+    </script>
+  </head>
+  <body>
+    <div id="preloader" class="hidden">
+      <div class="loader"></div>
+    </div>
+
+    <div class="relative flex min-h-screen justify-center">
+      <div class="flex flex-grow justify-between">
+        <div class="mx-auto max-w-screen-xl w-full max-sm:px-6 sm:px-6">
+          <nav class="navbar">
+            <a class="logo" href="index.html">Gresa Gela</a>
+
+            <input type="checkbox" id="nav" class="hidden" />
+            <label for="nav" class="nav-open"><i></i><i></i><i></i></label>
+
+            <div class="nav-container">
+              <ul class="nav_menu">
+                <li><a class="active_link" href="index.html">work</a></li>
+                <li><a href="mailto:gresagela1@gmail.com">contact</a></li>
+              </ul>
+            </div>
+          </nav>
+
+          <div class="flex mb-20 mt-16 lg:mt-32 lg:mb-40">
+            <p
+              class="text-4xl leading-snug sm:text-4xl sm:leading-snug md:text-5xl lg:text-6xl font-semibold lg:leading-normal text-black"
+            >
+              I enjoy crafting innovative solutions that simplify and enrich
+              everyday life.
+            </p>
+          </div>
+
+          <div class="grid grid-rows-2 gap-y-40">
+            <a href="enerio.html" class="w-full">
+              <div class="mb-10">
+                <h6
+                  class="text-3xl mb-3 sm:text-4xl sm:mb-4 md:text-4xl md:mb-4 lg:text-5xl lg:mb-6 font-500"
+                >
+                  Enerio
+                </h6>
+                <p class="text-lg text-black font-light">
+                  Designed an app to help flatmates optimize energy consumption.
+                </p>
+              </div>
+              <div
+                class="flex items-center bg-cover bg-no-repeat relative overflow-hidden"
+              >
+                <img
+                  src="images/enerio_cover.PNG"
+                  class="max-w-full rounded-lg"
+                  alt="Enerio"
+                />
+              </div>
+            </a>
+
+            <a href="vecheck.html" class="w-full">
+              <div class="mb-10">
+                <h6
+                  class="text-3xl mb-3 sm:text-4xl sm:mb-4 md:text-4xl md:mb-4 lg:text-5xl lg:mb-6 font-500"
+                >
+                  Vecheck
+                </h6>
+                <p class="text-lg text-black font-light">
+                  Designed a platform that revolutionizes the vehicle inspection
+                  process.
+                </p>
+              </div>
+              <div
+                class="flex items-center bg-cover bg-no-repeat relative overflow-hidden"
+              >
+                <img
+                  src="images/vecheck_cover.PNG"
+                  class="max-w-full rounded-lg"
+                  alt="VeCheck"
+                />
+              </div>
+            </a>
+          </div>
+
+          <div class="mb-12 mt-32 font-light">© Gresa Gela</div>
+        </div>
+      </div>
+    </div>
+
+    <!--Flowbite-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+  </body>
+</html>
