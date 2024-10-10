@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Liqui Moly</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="icon" href="images/gresagela_logo.png" type="image/png" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;0,9..40,1000;1,9..40,100;1,9..40,200;1,9..40,300;1,9..40,400;1,9..40,500;1,9..40,600;1,9..40,700;1,9..40,800;1,9..40,900;1,9..40,1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--Fancybox-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+
+    <script>
+      tailwind.config = {
+        content: ["./src/**/*.html"],
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["DM Sans", "sans"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <style type="text/tailwindcss">
+      ::selection {
+        color: #ffffff;
+        background: #135bd6;
+      }
+    </style>
+
+    <script>
+      $(document).ready(function () {
+        $("#preloader").fadeOut();
+        $("body").fadeIn();
+      });
+
+      window.onunload = function () {
+        window.scrollTo(0, 0);
+      };
+    </script>
+  </head>
+  <body>
+    <div id="preloader" class="hidden">
+      <div class="loader"></div>
+    </div>
+
+    <div class="relative flex min-h-screen justify-center">
+      <div class="flex flex-grow justify-between">
+        <div class="mx-auto max-w-screen-xl w-full max-sm:px-6 sm:px-6">
+          <nav class="navbar">
+            <a class="logo" href="index.html">Gresa Gela</a>
+
+            <input type="checkbox" id="nav" class="hidden" />
+            <label for="nav" class="nav-open"><i></i><i></i><i></i></label>
+
+            <div class="nav-container">
+              <ul class="nav_menu">
+                <li><a href="index.html">work</a></li>
+                <li><a href="mailto:gresagela1@gmail.com">contact</a></li>
+              </ul>
+            </div>
+          </nav>
+
+          <div class="mt-28 max-sm:mt-20 sm:mt-20 md:mt-24 xl:mt-24 2xl:mt-28">
+            <div class="mb-8 2xl:mb-10 xl:mb-10 md:mb-8 max-sm:mb-8 sm:mb-8">
+              <h1
+                class="text-5xl max-sm:text-4xl sm:text-4xl md:text-5xl lg:text-5xl 2xl:text-5xl font-medium pb-4"
+              >
+                Liqui Molly
+              </h1>
+              <p class="text-lg">
+                Redesigned the vehicle oil guide to improve the user experience.
+              </p>
+            </div>
+
+            <div
+              class="flex items-center bg-cover bg-no-repeat relative h-[30rem] bg-[#00458F] overflow-hidden rounded-[56px] max-sm:h-[18rem] max-sm:rounded-[40px] sm:h-[20rem] sm:rounded-[40px] md:rounded-[48px] lg:rounded-[48px] xl:rounded-[56px] 2xl:rounded-[56px] sm:md:h-[24rem] lg:h-[32rem] xl:h-[32rem] 2xl:h-[32rem]"
+            >
+              <img
+                src="images/liquimoly_cover.png"
+                class="max-w-full"
+                alt="Liqui Moly"
+              />
+            </div>
+          </div>
+
+          <div
+            class="mt-16 mb-24 max-sm:mt-12 max-sm:mb-16 sm:mt-12 sm:mb-16 md:mt-16 md:mb-16 lg:mt-12 lg:mb-20 xl:mt-12 xl:mb-24 2xl:mt-12 2xl:mb-24"
+          >
+            <div
+              class="flex justify-between items-center max-sm:block max-sm:space-y-6 sm:space-y-0"
+            >
+              <div class="block">
+                <p class="pb-1 max-sm:text-lg sm:text-lg text-xl font-semibold">
+                  Role
+                </p>
+                <span class="text-lg">Lead Product Designer</span>
+              </div>
+
+              <div class="block">
+                <p class="pb-1 max-sm:text-lg sm:text-lg text-xl font-semibold">
+                  Tools
+                </p>
+                <span class="text-lg">Figma, Miro</span>
+              </div>
+
+              <div class="block">
+                <p class="pb-1 max-sm:text-lg sm:text-lg text-xl font-semibold">
+                  Timeline
+                </p>
+                <span class="text-lg">6 weeks</span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="mb-32 max-sm:mb-20 sm:mb-20 md:mb-24 lg:mb-28 xl:mb-32 2xl:mb-32"
+          >
+            <h1
+              class="text-4xl max-sm:text-3xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl 2xl:text-4xl max-sm:pb-4 sm:pb-4 md:pb-8 lg:pb-8 xl:pb-8 2xl:pb-8 pb-8 font-medium"
+            >
+              Context
+            </h1>
+
+            <p class="text-lg">
+              The LIQUI MOLY app is an efficient solution for swiftly
+              identifying the optimal products for your vehicle. The app also
+              guides you to the nearest locations where you can purchase LIQUI
+              MOLY products, offers valuable insights on lubricants, additives,
+              care products and provides expert tips on vehicle maintenance.
+              However, after seeing the feedback from users, I decided to
+              improve the overall experience of this app.
+            </p>
+
+            <div class="flex items-center mt-12">
+              <span
+                class="border-4 border-[#f3f3f3] h-20 max-sm:h-32 sm:h-30 xl:h-20 2xl:h-20 rounded-3xl"
+              ></span>
+              <p
+                class="text-2xl md:text-2xl lg:text-2xl xl:text-2xl 2xl:text-2xl max-sm:text-xl sm:text-xl max-sm:px-8 sm:px-8 font-regular leading-normal px-10 xl:px-10 2xl:px-10"
+              >
+                My aim for this app is to contribute to this app which addresses
+                the current challenges and feedback from users.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="max-sm:mt-20 mb-32 max-sm:mb-20 sm:mb-20 md:mb-24 lg:mb-28 xl:mb-32 2xl:mb-32"
+          >
+            <p class="uppercase pb-4">Loading</p>
+            <p
+              class="text-3xl max-sm:text-2xl sm:text-2xl text-black font-medium"
+            >
+              Case study coming soon...
+            </p>
+          </div>
+
+          <div class="mb-12">© Gresa Gela</div>
+        </div>
+      </div>
+    </div>
+
+    <!--Fancybox-->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script src="fancybox.js"></script>
+
+    <!--Flowbite-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+  </body>
+</html>
